@@ -8,7 +8,7 @@ create table user(
 );
 
 create table task(
-	`id` int not null,
+	`id` int not null auto_increment,
     `username` varchar(50),
     `description` varchar(100),
     `status` boolean,
