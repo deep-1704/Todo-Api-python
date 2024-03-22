@@ -1,6 +1,6 @@
-from db_connection import get_db_connection
+from DAO import db_connection
 
-cnx = get_db_connection()
+cnx = db_connection.get_db_connection()
 
 
 def get_user_by_username(username):
@@ -18,5 +18,3 @@ def create_user(username, password):
     cursor.execute(query, (username, password))
     cnx.commit()
     cursor.close()
-
-
