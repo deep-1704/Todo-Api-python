@@ -1,3 +1,5 @@
+CREATE DATABASE `Terabh_todo`;
+
 use `Terabh_todo`;
 
 create table user(
@@ -16,3 +18,4 @@ create table task(
     primary key(`id`),
     FOREIGN KEY (`username`) REFERENCES `user`(`username`)
 );
+
