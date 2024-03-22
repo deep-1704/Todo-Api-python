@@ -27,4 +27,5 @@ async def register(user: User, response: Response):
         response.status_code = status.HTTP_400_BAD_REQUEST
         return {"message": "User already exists"}
     create_user(user.username, user.password)
-    return {"message": "User created"}
+    token = encode_jwt(user.dict())
+    return {"token": token}
