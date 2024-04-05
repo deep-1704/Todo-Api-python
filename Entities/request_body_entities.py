@@ -8,6 +8,6 @@ class User(BaseModel):
 
 class Task(BaseModel):
     id: int | None
-    username: str
+    username: str | None
     description: str
-    status: bool
+    status: bool | None
